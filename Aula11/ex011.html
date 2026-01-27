@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+
+    Digite o nome do seu pais <input type="text" name="txtpais" id="txtpais">
+    
+    <input type="button" value="verificar" onclick="review()">
+
+    <div id="re">Resultado</div>
+    
+    <script>
+        function review() {
+            var count = document.querySelector('input#txtpais')
+            var re = document.querySelector('div#re')
+
+            var nome = String(count.value)
+
+            if (nome != 'Brasil') {
+                re.innerHTML = `Você é <strong>estrangeiro!</strong>`
+            }else {
+                re.innerHTML = `Você é <strong>Brasileiro(a)</strong>`
+            }
+
+
+        }
+    </script>
+</body>
+</html>
