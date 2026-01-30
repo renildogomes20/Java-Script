@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <style>
+        html, body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            input {
+                width: 180px;
+                height: 40px;
+                box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.365);
+                text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.294);
+            }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+
+    <input type="button" value="Converter" onclick="converter()">
+
+    <p id="tema">Clique no botão acima para iniciar.</p>
+    <p id="kelvin"></p>
+    <p id="fahrent"></p>
+    
+    <script>
+        function converter() {
+            var leia = document.querySelector('p#tema')
+            var res1 = document.querySelector('p#kelvin')
+            var res2 = document.querySelector('p#fahrent')
+            var cel = Number(prompt('Digite uma temperatura em *C (Celsius)'))
+            leia.innerHTML =`<strong>A de temperatura ${cel}ºC, corresponde a...</strong>`
+            var kelv = cel + 273.15
+            var fahr = (cel*9/5)+32
+            res1.innerHTML = `${kelv.toFixed(2)}ºK (Kelvin)`
+            res2.innerHTML = `${fahr.toFixed(2)}ºF (Fahrenheit)`
+
+        }
+    </script>
+</body>
+</html>

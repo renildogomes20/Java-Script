@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+        html, body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            width: 180px;
+            height: 40px;
+            box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.365);
+            text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.294);
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e Depois</h1>
+
+    <input type="button" value="Antecessor e Sucessor" onclick="review()">
+    
+    <script>
+        function review() {
+            var num = Number(window.prompt('Digite um número inteiro qualquer'))
+        
+            var sucessor = (num+1)
+            var antecessor = (num-1)
+
+            window.alert(`Antes ${num}, temos o número ${antecessor}. \nDepois de ${num} temos o número ${sucessor}.`)
+        }
+    </script>
+</body>
+</html>

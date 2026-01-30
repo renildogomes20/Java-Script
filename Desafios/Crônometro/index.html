@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crônometro</title>
+    <style>
+       /* body {
+            background-color: rgba(196, 171, 102, 0.67);
+            font-family: Arial, Helvetica, sans-serif;
+        }*/
+
+        header h1 {
+            color: white;
+            text-align: center;
+            padding-top: 8px;
+            
+        }
+
+        section {
+            padding: 20px;
+            min-width: 320px;
+            max-width: 540px;
+            height: 290px;
+            margin: auto;
+            text-align: center;
+            background-color: white;
+            border-radius: 6px;
+        }
+        .foto {
+            padding: 15px;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            
+            
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        footer p > a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer a:hover {
+            background-color: rgba(255, 228, 196, 0.423);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id="hora"></div>
+        <div id="imag"></div>
+        
+    </section>
+    <footer>
+        <p><a href="https://renildogomes20.github.io/HTML-CSS/" target="_blank">©renildogomes</a></p>
+    </footer>
+
+    <script>
+        var pict = document.querySelector('div#imag')
+        var time = document.querySelector('div#hora')
+        var now = new Date()
+        var hour = now.getHours()
+        var min = now.getMinutes()
+        var sec = now.getSeconds()
+        time.innerHTML = `Agora são ${hour}:${min}`
+        if (hour>=0 && hour<12) {
+            pict.innerHTML = `<img src="imagens/bomdia.jpg" alt="" class="foto">`
+            document.body.backgroundColor = "rgba(196, 171, 102, 0.67)"
+            
+            
+        }else if(hour>=12 && hour<18) {
+            pict.innerHTML = `<img src="imagens/boatarde.jpg" alt="" class="foto">`
+            document.body.backgroundColor = "rgba(197, 125, 95, 0.908)"
+        } else {
+            pict.innerHTML = `<img src="imagens/boanoite.jpg" alt="" class="foto">`
+            document.body.style.backgroundColor = "rgba(17, 16, 16, 0.786)"
+        }
+    </script>
+    
+</body>
+</html>
