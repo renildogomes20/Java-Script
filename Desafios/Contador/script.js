@@ -11,6 +11,10 @@ function Contar() {
         alert("Passo inválido! Passo deve ser maior que zero!")
         return
     }
+    if (pass.value==='') {
+        alert('Campo vazio!')
+        return
+    }
     
     res.innerHTML = `<p>Contando: </p>`
     for (var c=n1; c<=n2; c+=passo) {
@@ -24,8 +28,5 @@ function Contar() {
         alert('Campo vazio!')
         return
     }
-    if (pass.value==='') {
-        alert('Campo vazio!')
-        return
-    }
+    
 }
