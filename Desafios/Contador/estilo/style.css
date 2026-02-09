@@ -21,7 +21,7 @@ header h1{
 
 section {
     width: 400px;
-    height: 250px;
+    height:auto;
     margin: auto;
     margin-top: 20px;
     padding: 10px;

@@ -17,9 +17,19 @@ function Contar() {
     }
     
     res.innerHTML = `<p>Contando: </p>`
-    for (var c=n1; c<=n2; c+=passo) {
-        res.innerHTML += c+`&#x1F449`
+    if (n1>n2) {
+        for(var c=n1; c>=n2; c-=passo) {
+            res.innerHTML += c+` &#x1F449`
+        }
+        res.innerHTML += `&#x1F3C1`
+    }else {
+        for (var c=n1; c<=n2; c+=passo) {
+            res.innerHTML += c+` &#x1F449`
+        }
+        res.innerHTML += `&#x1F3C1`
     }
+
+    
     if (ini.value ==='') {
         alert('Campo vazio!')
         return
