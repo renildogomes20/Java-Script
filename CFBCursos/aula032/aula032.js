@@ -7,11 +7,22 @@ const dc6=document.getElementById("c6")
 
 const arrayElementos= [dc1,dc2,dc3,dc4,dc5,dc6]
 
+let colecaoHTML=document.getElementsByName("div")
+
+colecaoHTML=[...colecaoHTML]
+
+colecaoHTML.map((e)=>{
+    console.log(e)
+})
+
 
 /*for (d  of arrayElementos) {
     d.innerHTML="CFB Cursos"
 }*/
 
-arrayElementos.map((e)=>{
+/*arrayElementos.map((e)=>{
     console.log(e)
-})
+})*/
+
+console.log(arrayElementos)
+console.log(colecaoHTML)

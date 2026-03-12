@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    padding: 5px;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 2.5px solid rgb(105, 101, 101);
+    border-radius: 4px;
+    margin: 4px;
+    width: 200px;
+    background-color: rgb(205, 205, 205);
+}
+
+div:hover {
+    background-color: rgb(177, 46, 46);
+}
+
+.c2{
+    background-color: rgb(78, 75, 75);
+    border: 2.5px solid rgb(157, 156, 156);
+}
+
+.destaque {
+    background-color: #444 !important;
+    color: #ccc !important;
+    border-color: #f00 !important;
+}
+
