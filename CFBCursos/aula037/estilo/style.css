@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 95vw;
+    height: 95vh;
+}
+
+
+.caixa {
+    flex-grow: 0.2;
+    border: 2px solid black;
+    width: 32%;
+    height: 60%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.curso {
+    background-color: rgba(127, 124, 124, 0.551);
+    margin: 6px;
+    padding: 5px;
+    width: 58%;
+    text-align: center;
+    border-radius: 5px;
+    border: 1.9px solid rgb(112, 110, 110);
+}
+
+button {
+    flex:1 1 10px;
+    width: 20%;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: rgb(61, 61, 139);
+    color: white;
+    cursor: pointer;
+    
+}
+
+.selecionado {
+    background-color: aqua !important;
+    border: 1px solid brown !important;
+}
+
+.deselecionado{
+    background-color: beige !important;
+}
+button:hover {
+    transition: transform 0.1s ease-in-out 0.1s;
+    transform: translateY(-2px);
+    background-color: rgba(102, 102, 158, 0.875);
+    color: rgb(255, 255, 255);
+}
