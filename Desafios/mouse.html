@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <style>
+        div {
+            padding: 20px;
+            width: 50px;
+            height: 60px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>Renildo</div>
+
+    <script>
+        const objet = document.getElementsByTagName("div")[0]
+
+        objet.addEventListener("mouseover", ()=>{
+            objet.style.backgroundColor  = "green"; 
+        })
+    
+        objet.addEventListener("mouseout", ()=>{
+            objet.style.backgroundColor = "red";
+        })
+    </script>
+</body>
+</html>
